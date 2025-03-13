@@ -1,27 +1,27 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
-        <h1>Store Details - {{ $store->name }}</h1>
-        <p><strong>Address : </strong> {{ $store->location }}</p>
+    <div class="container" dir="rtl">
+        <h1>تفاصيل المخزن - {{ $store->name }}</h1>
+        <p><strong>العنوان : </strong> {{ $store->location }}</p>
 
         <!-- نموذج إضافة تصنيف جديد -->
-        <h3>Add New Category</h3>
+        <h3>إضافة فئة جديدة</h3>
         <form action="{{ route('stores.addCategory', $store->id) }}" method="POST">
             @csrf
             <div class="mb-3">
-                <label for="category_name" class="form-label">Category Name</label>
+                <label for="category_name" class="form-label">اسم الفئة</label>
                 <input type="text" class="form-control" name="name" required>
             </div>
-            <button type="submit" class="btn btn-primary">Add Category</button>
+            <button type="submit" class="btn btn-primary">اضافة فئة</button>
         </form>
 
         <!-- نموذج إضافة تبرعات -->
-        <h3 class="mt-4">Add Donations</h3>
+        <h3 class="mt-4">اضافة تبرع</h3>
         <form action="{{ route('stores.addDonation', $store->id) }}" method="POST">
             @csrf
             <div class="mb-3">
-                <label for="category_name" class="form-label">Select Category</label>
+                <label for="category_name" class="form-label">اختار فئة</label>
                 <select class="form-control" name="category_name" required>
                     @foreach ($store->categories as $category)
                         <option value="{{ $category->name }}">{{ $category->name }}</option>
@@ -29,29 +29,29 @@
                 </select>
             </div>
             <div class="mb-3">
-                <label for="carton_quantity" class="form-label">Number Of Cartons</label>
+                <label for="carton_quantity" class="form-label">عدد الكراتين</label>
                 <input type="number" class="form-control" name="carton_quantity" required>
             </div>
             <div class="mb-3">
-                <label for="item_quantity" class="form-label">Number Of Items</label>
+                <label for="item_quantity" class="form-label">عدد العناصر</label>
                 <input type="number" class="form-control" name="item_quantity" required>
             </div>
             <div class="mb-3">
-                <label for="source" class="form-label">Source</label>
+                <label for="source" class="form-label">المصدر</label>
                 <input type="text" class="form-control" name="source" required>
             </div>
-            <button type="submit" class="btn btn-success">Add Donation</button>
+            <button type="submit" class="btn btn-success">اضافة تبرع</button>
         </form>
 
         <!-- عرض التبرعات المخزنة -->
-        <h2 class="mt-5">Donations inside the warehouse</h2>
+        <h2 class="mt-5">التبرعات داخل المستودع</h2>
         <table class="table table-bordered mt-3">
             <thead>
                 <tr>
-                    <th>Classification</th>
-                    <th>Number of cartons</th>
-                    <th>Number of items</th>
-                    <th>Source</th>
+                    <th>تصنيف</th>
+                    <th>عدد الكراتين</th>
+                    <th>عدد العناصر</th>
+                    <th>المصدر</th>
                 </tr>
             </thead>
             <tbody>
@@ -66,6 +66,6 @@
             </tbody>
         </table>
 
-        <a href="{{ route('stores.index') }}" class="btn btn-secondary">Back to stores</a>
+        <a href="{{ route('stores.index') }}" class="btn btn-secondary" style="margin-bottom: 25px">العودة الى المخازن</a>
     </div>
 @endsection

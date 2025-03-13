@@ -76,6 +76,7 @@
                         <a class="nav-link pl-lg-2" href="{{route('users.index')}}"><span class="ml-1">المستخدمين</span></a>
                         <a class="nav-link pl-lg-2" href="{{route('constants.index')}}"><span class="ml-1">ثوابت النظام</span></a>
                         <a class="nav-link pl-lg-2" href="{{route('currencies.index')}}"><span class="ml-1">العملات</span></a>
+                        <a class="nav-link pl-lg-2" href="{{route('stores.index')}}"><span class="ml-1">المخازن</span></a>
 
                     </ul>
                 </li>

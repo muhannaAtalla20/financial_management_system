@@ -21,13 +21,35 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+## How to Run the Project
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Follow these steps to set up and run the Laravel project:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+```bash
+# 1. Clone the Repository
+git clone https://github.com/muhannaAtalla20/financial_management_system.git
+cd your-repository
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+# 2. Install Dependencies
+composer install
+
+# 3. Set Up Environment File
+cp .env.example .env
+# Update the .env file with your database credentials
+
+# 4. Generate Application Key
+php artisan key:generate
+
+# 5. Run Migrations
+php artisan migrate
+```
+
+# 6. Serve the Application
+php artisan serve
+# The application will be available at http://localhost:8000
+
+# Optional: Seed the Database (if applicable)
+php artisan db:seed
 
 ## Laravel Sponsors
 

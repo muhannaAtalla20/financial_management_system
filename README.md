@@ -7,8 +7,9 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+# Laravel Financial Management System
 
+## About Laravel
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
 - [Simple, fast routing engine](https://laravel.com/docs/routing).
@@ -23,33 +24,43 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 
 ## How to Run the Project
 
-Follow these steps to set up and run the Laravel project:
-
+### 1. Clone the Repository
 ```bash
-# 1. Clone the Repository
 git clone https://github.com/muhannaAtalla20/financial_management_system.git
-cd your-repository
+cd financial_management_system
+```
 
-# 2. Install Dependencies
+### 2. Install Dependencies
+```bash
 composer install
+```
 
-# 3. Set Up Environment File
+### 3. Set Up Environment File
+```bash
 cp .env.example .env
-# Update the .env file with your database credentials
+```
+Update the `.env` file with your database credentials.
 
-# 4. Generate Application Key
+### 4. Generate Application Key
+```bash
 php artisan key:generate
+```
 
-# 5. Run Migrations
+### 5. Run Migrations
+```bash
 php artisan migrate
 ```
 
-# 6. Serve the Application
+### 6. Serve the Application
+```bash
 php artisan serve
-# The application will be available at http://localhost:8000
+```
+The application will be available at [http://localhost:8000](http://localhost:8000).
 
-# Optional: Seed the Database (if applicable)
+### Optional: Seed the Database (if applicable)
+```bash
 php artisan db:seed
+```
 
 ## Laravel Sponsors
 
@@ -86,3 +97,4 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
